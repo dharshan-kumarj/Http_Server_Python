@@ -31,6 +31,15 @@ while True :
             response = 'HTTP/1.1 200 OK \n\n' + content
             client_socket.sendall(response.encode())
             client_socket.close()
+        elif http_path == '/test':
+            fin = open('test.json')
+            content = fin.read()
+            fin.close()
+
+            response = 'HTTP/1.1 200 OK \n\n' + content
+            client_socket.sendall(response.encode())
+            client_socket.close()
+
     else :
         response = 'HTTP/1.1 405 Method Not Allowed \n\n Allow only GET Method'
         client_socket.sendall(response.encode())

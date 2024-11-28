@@ -1,0 +1,32 @@
+{
+    "all_imp_passed": true,
+    "endpoint_response": {
+        "body": "",
+        "headers": {
+            "Access-Control-Allow-Origin": [
+                "*"
+            ],
+            "Cf-Cache-Status": [
+                "DYNAMIC"
+            ],
+            "Cf-Ray": [
+                "8c8b94535b6840a7-SIN"
+            ],
+            "Date": [
+                "Wed, 25 Sep 2024 14:07:14 GMT"
+            ],
+            "Nel": [
+                "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+            ],
+            "Report-To": [
+                "{\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=P7SC7EzP9NEavgsTu%2BS7c7wvZHRTDNeEPU%2B6T1MFd%2BSRBixXnQpIv9T6BSpikKEz0U7v%2Fls4zuN083ME5S0L1n4cSDMj61QtSiK1lUcL0Xi1IHqd9k0KxKFr24Fl0BQ097fddas%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+            ],
+            "Server": [
+                "cloudflare"
+            ]
+        },
+        "status_code": 404
+    },
+    "new_env": {},
+    "results": null
+}
