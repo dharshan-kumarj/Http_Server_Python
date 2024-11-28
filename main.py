@@ -13,6 +13,6 @@ print(f"Server is listening on {Host}:{Port}")
 
 while True :
     client_socket,client_address = server_socket.accept()
-    client = client_socket.recv(1024)
+    client = client_socket.recv(1024).decode()
     print(client)
 
