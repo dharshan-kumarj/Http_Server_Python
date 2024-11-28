@@ -22,12 +22,17 @@ while True :
     http_method=first_headers_components[0]
     http_path=first_headers_components[1]
     
-    if http_path == '/' :
-        fin = open('index.html')
-        content = fin.read()
-        fin.close()
+    if http_method == 'GET':
+        if http_path == '/' :
+            fin = open('index.html')
+            content = fin.read()
+            fin.close()
 
-        response = 'HTTP/1.1 200 OK \n\n' + content
+            response = 'HTTP/1.1 200 OK \n\n' + content
+            client_socket.sendall(response.encode())
+            client_socket.close()
+    else :
+        response = 'HTTP/1.1 405 Method Not Allowed \n\n Allow only GET Method'
         client_socket.sendall(response.encode())
         client_socket.close()
 
