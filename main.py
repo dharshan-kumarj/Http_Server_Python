@@ -13,6 +13,23 @@ print(f"Server is listening on {Host}:{Port}")
 
 while True :
     client_socket,client_address = server_socket.accept()
-    client = client_socket.recv(1024).decode()
-    print(client)
+    request = client_socket.recv(1024).decode()
+    print(request)
+    headers = request.split('\n')
+
+    first_headers_components = headers[0].split()
+ 
+    http_method=first_headers_components[0]
+    http_path=first_headers_components[1]
+    
+    if http_path == '/' :
+        fin = open('index.html')
+        content = fin.read()
+        fin.close()
+
+        response = 'HTTP/1.1 200 OK \n\n' + content
+        client_socket.sendall(response.encode())
+        client_socket.close()
+
+    
 
